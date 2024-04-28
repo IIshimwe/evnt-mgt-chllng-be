@@ -8,3 +8,11 @@ export const validateUser = (user) => {
   });
   return schema.validate(user);
 };
+
+export const validateLoginInputs = (req) => {
+  const schema = Joi.object({
+    email: Joi.string().required().email(),
+    password: Joi.string().required(),
+  });
+  return schema.validate(req);
+};
