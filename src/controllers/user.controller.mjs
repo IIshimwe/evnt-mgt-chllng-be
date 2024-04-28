@@ -15,5 +15,5 @@ export const createUser = async (req, res) => {
   user.password = await hashPassword(user.password);
   await user.save();
 
-  res.status(200).send(_.pick(user, ["_id", "name", "eamil"]));
+  res.status(200).send(_.pick(user, ["_id", "name", "email"]));
 };
