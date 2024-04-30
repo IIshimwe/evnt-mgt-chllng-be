@@ -29,31 +29,3 @@ const eventSchema = new Schema({
 });
 
 export default model("Event", eventSchema);
-
-// import { required } from "joi";
-// import mongoose, { Schema, model } from "mongoose";
-
-// const Event = model(
-//   "Events",
-//   new Schema({
-//     title: {
-//       type: String,
-//       maxlength: 255,
-//       required: true,
-//     },
-//     date: {
-//       type: Date,
-//       required: true,
-//     },
-//     location: {
-//       type: String,
-//       required: true,
-//     },
-//     capacity: {
-//       type: { Number, default: 10 },
-//     },
-//     bookings: [{
-//         type: mongoose.
-//     }]
-//   })
-// );
