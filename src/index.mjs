@@ -7,9 +7,9 @@ import events from "./routes/event.route.mjs";
 const app = express();
 
 app.use(express.json());
-app.use("/api/v1/events", events);
-app.use("/api/v1/users", users);
 app.use("/api/v1/auth", auth);
+app.use("/api/v1/users", users);
+app.use("/api/v1/events", events);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`App listening to PORT: ${PORT}`));

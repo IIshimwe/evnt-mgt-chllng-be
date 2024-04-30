@@ -16,3 +16,13 @@ export const validateLoginInputs = (req) => {
   });
   return schema.validate(req);
 };
+
+export const validateEvent = (event) => {
+  const schema = Joi.object({
+    title: Joi.string().max(50).required(),
+    description: Joi.string().max(255).required(),
+    location: Joi.string().max(50).required(),
+    date: Joi.date().required(),
+  });
+  return schema.validate(event);
+};
