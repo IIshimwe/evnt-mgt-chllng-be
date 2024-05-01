@@ -18,7 +18,7 @@ const bookingSchema = new Schema({
     },
   ],
   numberOfTickets: {
-    type: number,
+    type: Number,
     max: 10,
   },
   bookedDate: {
