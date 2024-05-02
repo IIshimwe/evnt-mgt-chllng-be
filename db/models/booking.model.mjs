@@ -1,10 +1,6 @@
 import { Schema, model } from "mongoose";
 
 const bookingSchema = new Schema({
-  bookingId: {
-    type: String,
-    required: true,
-  },
   userId: [
     {
       type: Schema.Types.ObjectId,
