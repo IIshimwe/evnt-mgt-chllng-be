@@ -1,5 +1,5 @@
 import Booking from "../../db/models/booking.model.mjs";
-import User from "../../db/models/user.model.mjs";
+import { User } from "../../db/models/user.model.mjs";
 import Event from "../../db/models/event.model.mjs";
 
 export const getBookings = async (req, res) => {

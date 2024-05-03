@@ -7,9 +7,11 @@ import {
   getSingleEvent,
   updateEvent,
 } from "../controllers/event.controller.mjs";
+import { auth } from "../middlewares/auth.middleware.mjs";
+import { admin } from "../middlewares/admin.middleware.mjs";
 
 router.get("/", getAllEvents);
-router.post("/", createEvent);
+router.post("/", [auth, admin], createEvent);
 router.get("/:id", getSingleEvent);
 router.put("/:id", updateEvent);
 router.delete("/:id", deleteEvent);
