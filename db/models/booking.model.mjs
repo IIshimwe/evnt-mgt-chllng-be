@@ -13,14 +13,6 @@ const bookingSchema = new Schema({
       ref: "Event",
     },
   ],
-  numberOfTickets: {
-    type: Number,
-    max: 10,
-  },
-  bookedDate: {
-    type: Date,
-    default: Date.now,
-  },
 });
 
 export default model("Booking", bookingSchema);

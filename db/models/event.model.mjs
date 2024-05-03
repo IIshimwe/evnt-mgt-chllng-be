@@ -20,12 +20,6 @@ const eventSchema = new Schema({
     type: Number,
     default: 8,
   },
-  bookedBy: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "User",
-    },
-  ],
 });
 
 export default model("Event", eventSchema);
