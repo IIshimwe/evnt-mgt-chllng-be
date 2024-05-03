@@ -13,7 +13,7 @@ import { admin } from "../middlewares/admin.middleware.mjs";
 router.get("/", getAllEvents);
 router.post("/", [auth, admin], createEvent);
 router.get("/:id", getSingleEvent);
-router.put("/:id", updateEvent);
-router.delete("/:id", deleteEvent);
+router.put("/:id", [auth, admin], updateEvent);
+router.delete("/:id", [auth, admin], deleteEvent);
 
 export default router;
